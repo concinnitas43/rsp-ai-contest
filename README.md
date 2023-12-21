@@ -2,6 +2,19 @@
 
     hand: (r/p/s)
 
+    match: (hand, hand)
+        p1_hand, p2_hand (r/p/s)
+
+        evalute( self ) -> 1, 0, -1 // 1 p1 wins, 0 tie, -1 p2 wins
+
+    History: list[match]
+        p1_hands, p2_hands list[(r/p/s)] 
+
+    agent
+        history: History 
+        
+        play( history, memo, * ) -> hand, memo
+
     game
         p1, p2: agent
         history: History // p1hands default flip for p2
@@ -18,17 +31,6 @@
 
         print, str, ...
 
-    match: (hand, hand)
-        p1_hand, p2_hand (r/p/s)
 
-        evalute( self ) -> 1, 0, -1 // 1 p1 wins, 0 tie, -1 p2 wins
 
-    History: list[match]
-        p1_hands, p2_hands list[(r/p/s)] 
-
-    agent
-        history: History 
-        
-        play( history, memo, * ) -> hand, memo
-        
 
