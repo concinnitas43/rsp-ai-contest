@@ -4,4 +4,6 @@ from classes.utils import *
 
 class Agent4(Agent):
     def play(self, history: History) -> Hand:
-        return Hand.P
+        if len(history) >= 2:
+            return history[-2]
+        return Hand.R
