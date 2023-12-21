@@ -6,7 +6,7 @@ from examples.agent4 import Agent4
 from examples.agent5 import Agent5
 from examples.agent6 import Agent6
 
-g = Game(Agent3(), Agent5())
+g = Game(Agent6(), Agent5())
 
 g.run(100)
 
