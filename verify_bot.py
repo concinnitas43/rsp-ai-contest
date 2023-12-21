@@ -11,8 +11,15 @@ from examples.dummies.agent4 import Agent4
 
 dummies = [Agent1(), Agent2(), Agent3(), Agent4(), Agent5(), Agent6()]
 
-myBot = Agent4()
+my_bot = Agent5() ### FIX THIS LINE WITH YOUR OWN BOT
 
-g.run(100)
 
-print(g.result)
+results = []
+for i in range(6):
+    g = Game(my_bot, dummies[i])
+    g.run(100)
+    results.append(g.result)
+    print(F"GAME {i+1} RESULTS : {'FAIL' if g.result <= 75 else 'SUCCESS'} \t\t\t {g.result}")
+
+
+print(results)
