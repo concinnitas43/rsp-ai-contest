@@ -2,6 +2,11 @@
 from classes.agent import Agent
 from classes.utils import *
 
+import random
+
 class Agent6(Agent):
     def play(self, history: History) -> Hand:
-        return history[-1][1]
+        try: 
+            return history[-1][1]
+        except IndexError:
+            return random.choice(list(Hand))
