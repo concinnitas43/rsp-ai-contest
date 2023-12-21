@@ -5,6 +5,21 @@ class Hand(Enum):
     P = auto()
     S = auto()
     
+def succ(hand: Hand) -> Hand:
+    if hand == Hand.R:
+        return Hand.P
+    elif hand == Hand.P:
+        return Hand.S
+    else:
+        return Hand.R
+
+def pred(hand: Hand) -> Hand:
+    if hand == Hand.R:
+        return Hand.S
+    elif hand == Hand.P:
+        return Hand.R
+    else:
+        return Hand.P
 
 Match = (Hand, Hand)
 

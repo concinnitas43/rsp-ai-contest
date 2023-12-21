@@ -2,6 +2,8 @@
 from classes.agent import Agent
 from classes.utils import *
 
-class Agent1(Agent):
+class Agent3(Agent):
     def play(self, history: History) -> Hand:
-        return Hand.P
+        if len(history) % 2 == 0:
+            return Hand.P
+        return Hand.R
