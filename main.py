@@ -6,7 +6,7 @@ from examples.dummies.agent4 import Agent4
 from examples.dummies.agent5 import Agent5
 from examples.dummies.agent6 import Agent6
 
-g = Game(Agent4(), Agent6())
+g = Game(Agent6(), Agent5())
 
 g.run(100)
 
