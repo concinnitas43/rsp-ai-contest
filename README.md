@@ -11,18 +11,15 @@
         p1_hands, p2_hands list[(r/p/s)] 
 
     agent
-        history: History 
-        
         play( history, memo, * ) -> hand, memo
 
     game
         p1, p2: agent
         history: History // p1hands default flip for p2
-        memo1, memo2: Memo
 
         play( self ):
-            hand1, memo1 <- p1 play history, memo1
-            hand2, memo2 <- p2 play history, memo2
+            hand1<- p1 play history
+            hand2<- p2 play history
 
             history append (hand1, hand2)
 

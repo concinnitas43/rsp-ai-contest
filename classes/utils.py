@@ -22,3 +22,6 @@ def evaluate(match: Match) -> int:
 
 History = list[Match]
 
+
+def flip(hist: History) -> History:
+    return [(match[1], match[0]) for match in hist]
