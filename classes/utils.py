@@ -8,7 +8,7 @@ class Hand(Enum):
 
 Match = (Hand, Hand)
 
-def evalute(match: Match) -> int:
+def evaluate(match: Match) -> int:
     if match[0] == match[1]:
         return 0
     elif match[0] == Hand.R and match[1] == Hand.S:
