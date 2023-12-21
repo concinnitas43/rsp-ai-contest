@@ -28,7 +28,7 @@ class Game:
             self.play()
             if broadcast:
                 print('\033c')
-                print(f"Time : {t}")
+                print(f"Time : {t + 1}")
                 print_bar( self.result + t + 1, 2 * n) # p1
                 print_bar( -self.result + t + 1, 2 * n) # p2
             time.sleep(delay)
