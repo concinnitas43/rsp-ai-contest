@@ -5,8 +5,9 @@ from examples.dummies.agent3 import Agent3
 from examples.dummies.agent4 import Agent4
 from examples.dummies.agent5 import Agent5
 from examples.dummies.agent6 import Agent6
+from examples.example_agent_with_ml.main_agent import AgentML
 
-g = Game(Agent6(), Agent5())
+g = Game(AgentML(), Agent4())
 
 g.run(100)
 
