@@ -1,4 +1,5 @@
 from enum import Enum, auto
+from typing import TypeAlias
 
 class Hand(Enum):
     R = auto()
@@ -21,7 +22,7 @@ def pred(hand: Hand) -> Hand:
     else:
         return Hand.P
 
-Match = (Hand, Hand)
+Match: TypeAlias = tuple[Hand, Hand]
 
 def evaluate(match: Match) -> int:
     if match[0] == match[1]:
