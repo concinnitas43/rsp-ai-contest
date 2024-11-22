@@ -36,7 +36,7 @@ def evaluate(match: Match) -> int:
     else:
         return -1 
 
-History = list[Match]
+History: TypeAlias = list[Match]
 
 
 def flip(hist: History) -> History:
